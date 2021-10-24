@@ -110,7 +110,7 @@ p {
     width: auto;
     position: absolute;
     background: slategray;
-    top: 110%;
+    top: 1000px;
     left: 50%;
     transform: translate(-50%, -50%);
     -webkit-clip-path: polygon(10px 0%, calc(100% - 10px) 0%, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0% calc(100% - 10px), 0% 10px);
