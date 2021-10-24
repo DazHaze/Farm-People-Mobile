@@ -21,6 +21,32 @@ p {
     padding: 1.2rem;
 }
 
+.nav-bar > ul{
+    display: flex;
+    flex-direction: row;
+    background: slategray;
+    padding: 10px 10px 10px 0;
+}
+
+.nav-bar li{
+    list-style-type: none;
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+.nav-links{
+    padding-top: .3rem;
+}
+
+#logo{
+    flex: 1;
+    font-size: 1.5rem;
+}
+
 #about-buttons {
     display: flex;
     flex-direction: row;
@@ -107,9 +133,9 @@ p {
 
 #instagram-post > div{
     height: auto;
-    width: auto;
+    width: 60%;
     position: absolute;
-    background: slategray;
+    background: white;
     top: 1000px;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -117,9 +143,10 @@ p {
     clip-path: polygon(10px 0%, calc(100% - 10px) 0%, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0% calc(100% - 10px), 0% 10px);
 }
 #instagram-post > div > p{
-    color: white !important;
+    color: black !important;
     text-transform: uppercase;
     cursor: default;
+    text-align: center;
 }
 
 /* creates the level of zoom for the hero image */
