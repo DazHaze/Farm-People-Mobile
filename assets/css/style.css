@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#about-buttons{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10%;
+    background-color: pink;
+    
+}
+
+#about-buttons div{
+    height: 50px;
+    width: 20%;
+    background-color: white;
+    border: solid black 2px;
+}
+
+#about-buttons div:nth-child(4){
+    flex: 1;
+    display: none;
+}
+
+#about-section{
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#about-card{
+    
+}
