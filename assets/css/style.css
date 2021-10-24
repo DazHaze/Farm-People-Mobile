@@ -21,6 +21,10 @@ p {
     padding: 1.2rem;
 }
 
+body{
+    position: relative;
+}
+
 .nav-bar > ul{
     display: flex;
     flex-direction: row;
@@ -40,7 +44,33 @@ p {
 
 .nav-links{
     padding-top: .3rem;
+    padding-left: .3rem;
+    padding-right: .3rem;
 }
+
+.nav-menu{
+    background: white;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 80%;
+    height: 300px;
+    right: 0;
+    z-index: 50;
+
+    -webkit-clip-path: polygon(10px 0%, calc(100% - 10px) 0%, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0% calc(100% - 10px), 0% 10px);
+    clip-path: polygon(10px 0%, calc(100% - 10px) 0%, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0% calc(100% - 10px), 0% 10px);
+}
+
+.nav-menu li{
+    text-align: center;
+}
+
+.nav-menu a{
+    color: black;
+}
+
+
 
 #logo{
     flex: 1;
