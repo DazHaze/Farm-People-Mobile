@@ -98,6 +98,30 @@ p {
     letter-spacing: 0.3rem;
 }
 
+#instgram-post{
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+}
+
+#instagram-post > div{
+    height: auto;
+    width: auto;
+    position: absolute;
+    background: slategray;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-clip-path: polygon(10px 0%, calc(100% - 10px) 0%, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0% calc(100% - 10px), 0% 10px);
+    clip-path: polygon(10px 0%, calc(100% - 10px) 0%, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0% calc(100% - 10px), 0% 10px);
+}
+#instagram-post > div > p{
+    color: white !important;
+    text-transform: uppercase;
+    cursor: default;
+}
+
 /* creates the level of zoom for the hero image */
 @keyframes hero-zoom {
     from {

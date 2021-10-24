@@ -3,6 +3,32 @@ window.addEventListener('DOMContentLoaded', (event) => {
     ClickAboutButtons();
 });
 
+let cards = [{
+    'heading': 'About us',
+    'image': 'assets/images/coupleDrawing-tp4.png',
+    'description': `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore perspiciatis
+    quisquam quod dolor, culpa ea excepturi soluta dicta cumque,
+    quo corrupti optio praesentium ipsa suscipit.Ratione nisi eligendi quasi
+    fuga ?`
+},
+{
+    'heading': 'What we do',
+    'image': 'assets/images/greenhouse-photo2.png',
+    'description': `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore perspiciatis
+    quisquam quod dolor, culpa ea excepturi soluta dicta cumque,
+    quo corrupti optio praesentium ipsa suscipit.Ratione nisi eligendi quasi
+    fuga ?`
+},
+{
+    'heading': 'What we have',
+    'image': 'assets/images/chicken_eggs2.png',
+    'description': `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore perspiciatis
+    quisquam quod dolor, culpa ea excepturi soluta dicta cumque,
+    quo corrupti optio praesentium ipsa suscipit.Ratione nisi eligendi quasi
+    fuga ?`
+}
+]
+
 function LoadSetup() {
     let buttons = document.getElementsByClassName('about-button');
     UpdateAboutCard(cards[0]);
@@ -13,7 +39,6 @@ function ClickAboutButtons() {
     let buttons = document.getElementsByClassName('about-button');
     for (let i = 0; i < buttons.length; i++) {
         const button = buttons[i];
-        // button.innerHTML = i;
         button.setAttribute('data-type', i);
         button.addEventListener('click', function ButtonClicked() {
             ActiveButtonStyle(button);
@@ -33,32 +58,6 @@ function ActiveButtonStyle(button) {
         }
     }
 }
-
-let cards = [{
-        'heading': 'About us',
-        'image': 'assets/images/coupleDrawing-tp4.png',
-        'description': `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore perspiciatis
-        quisquam quod dolor, culpa ea excepturi soluta dicta cumque,
-        quo corrupti optio praesentium ipsa suscipit.Ratione nisi eligendi quasi
-        fuga ?`
-    },
-    {
-        'heading': 'What we do',
-        'image': 'assets/images/greenhouse-photo2.png',
-        'description': `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore perspiciatis
-        quisquam quod dolor, culpa ea excepturi soluta dicta cumque,
-        quo corrupti optio praesentium ipsa suscipit.Ratione nisi eligendi quasi
-        fuga ?`
-    },
-    {
-        'heading': 'What we have',
-        'image': 'assets/images/chicken_eggs2.png',
-        'description': `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore perspiciatis
-        quisquam quod dolor, culpa ea excepturi soluta dicta cumque,
-        quo corrupti optio praesentium ipsa suscipit.Ratione nisi eligendi quasi
-        fuga ?`
-    }
-]
 
 function UpdateAboutCard(card) {
     if (card === undefined) {
