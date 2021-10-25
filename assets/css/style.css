@@ -3,11 +3,17 @@
     padding: 0;
 }
 
+:root{
+    --background-color: #ef9273;
+    --accent-dark-green: slategray;
+    --accent-beige: #f5eec2;
+}
+
 h1,
 h2,
 h3 {
     font-family: 'Roboto', sans-serif;
-    color: white;
+    color: black;
     padding: 1.2rem;
 }
 
@@ -17,7 +23,7 @@ h2 {
 
 p {
     font-family: 'Zen Kurenaido', sans-serif;
-    color: white;
+    color: black;
     padding: 1.2rem;
 }
 
@@ -28,8 +34,9 @@ body{
 .nav-bar > ul{
     display: flex;
     flex-direction: row;
-    background: slategray;
+    background: var(--background-color);
     padding: 10px 10px 10px 0;
+    margin-bottom: 50px;
 }
 
 .nav-bar li{
@@ -38,7 +45,7 @@ body{
 
 .nav-bar a{
     text-decoration: none;
-    color: white;
+    color: black;
     padding: 5px;
 }
 
@@ -70,6 +77,10 @@ body{
     color: black;
 }
 
+.nav-links i {
+    color: black;
+}
+
 
 
 #logo{
@@ -87,7 +98,7 @@ body{
 }
 
 .active-button {
-    background-color: slategray !important;
+    background-color: var(--background-color) !important;
 }
 
 .active-button>i {
@@ -97,7 +108,7 @@ body{
 .about-button {
     height: 50px;
     width: 20%;
-    background-color: grey;
+    background-color: var(--accent-dark-green);
     border-radius: 0 10px 0 0;
     text-align: center;
     cursor: pointer;
@@ -116,7 +127,7 @@ body{
 #about-section {
     height: 100%;
     width: 100%;
-    background-color: slategray;
+    background-color:var(--background-color);
     display: flex;
     flex-direction: column;
 
