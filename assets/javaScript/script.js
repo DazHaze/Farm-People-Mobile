@@ -1,3 +1,6 @@
+/**
+ * Run functions after the DOM has completed loading.
+ */
 window.addEventListener('DOMContentLoaded', (event) => {
     LoadSetup();
     ClickAboutButtons();
@@ -29,12 +32,20 @@ let cards = [{
 }
 ]
 
+/**
+ * Populate about section with first element of card list.
+ */
 function LoadSetup() {
     let buttons = document.getElementsByClassName('about-button');
     UpdateAboutCard(cards[0]);
     ActiveButtonStyle(buttons[0]);
 }
 
+
+/** 
+ * Adds click function to about section buttons.
+ * Returns button number.
+ */
 function ClickAboutButtons() {
     let buttons = document.getElementsByClassName('about-button');
     for (let i = 0; i < buttons.length; i++) {
@@ -48,6 +59,10 @@ function ClickAboutButtons() {
     }
 }
 
+/**
+ * Updates the active about card button to have the active style.
+ * Removes active style from buttons that are not active.
+ */
 function ActiveButtonStyle(button) {
     let buttons = document.getElementsByClassName('about-button');
     button.classList.add('active-button');
@@ -59,6 +74,10 @@ function ActiveButtonStyle(button) {
     }
 }
 
+/** 
+ * Updates about card information with card object information.
+ * Creates a placeholder if no card object exists.
+ */
 function UpdateAboutCard(card) {
     if (card === undefined) {
         document.getElementById('about-heading').innerHTML = "Placeholder";
