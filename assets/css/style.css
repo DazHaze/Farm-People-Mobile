@@ -46,14 +46,14 @@ body{
 
 .nav-bar a{
     text-decoration: none;
-    color: black;
     padding: 5px;
+    font-size: 1.5rem;
 }
 
 .nav-links{
-    padding-top: .3rem;
-    padding-left: .3rem;
-    padding-right: .3rem;
+    padding-left: .8rem;
+    padding-right: .8rem;
+    
 }
 
 .nav-menu{
@@ -81,14 +81,15 @@ body{
 }
 
 .nav-links i {
-    color: black;
+    color: var(--accent-beige);
+    text-shadow: 0 0 1px #000;
 }
 
 
 
 #logo{
     flex: 1;
-    background-image: url('/assets/images/logo.png');
+    background-image: url('https://raw.githubusercontent.com/DazHaze/Farm-People-Mobile/main/assets/images/logo.png');
     background-repeat: no-repeat;
     background-position: center;
     width: 200px;
@@ -184,7 +185,7 @@ body{
     width: 60%;
     position: absolute;
     background: white;
-    top: 1000px;
+    top: 1050px;
     left: 50%;
     transform: translate(-50%, -50%);
     -webkit-clip-path: polygon(10px 0%, calc(100% - 10px) 0%, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0% calc(100% - 10px), 0% 10px);
