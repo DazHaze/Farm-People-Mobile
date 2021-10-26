@@ -39,6 +39,23 @@ body{
     background: var(--neutral);
 }
 
+footer{
+    background: var(--background-color);
+    border-top: var(--red) solid 2px;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer > p{
+    color: white;
+}
+
+footer > p > i{
+    color: white;
+}
+
 .nav-bar > ul{
     display: flex;
     flex-direction: row;
@@ -147,6 +164,7 @@ body{
     background-color:var(--background-color);
     display: flex;
     flex-direction: column;
+    border-bottom: var(--red) solid 2px;
 
 }
 
