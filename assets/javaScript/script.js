@@ -4,6 +4,7 @@
 window.addEventListener('DOMContentLoaded', (event) => {
     LoadSetup();
     ClickAboutButtons();
+    ClickMenuBars();
 });
 
 let cards = [{
@@ -57,6 +58,19 @@ function ClickAboutButtons() {
             return button.getAttribute('data-type');
         })
     }
+}
+
+function ClickMenuBars(){
+    let menuButton = document.getElementById('menu-button');
+    menuButton.addEventListener('click', function menuButtonClicked() {
+        console.log('menu-clicked');
+        OpenMenu();
+    })
+}
+
+function OpenMenu(menuButton){
+    menu = document.getElementsByClassName('nav-menu')[0];
+    menu.style.display = 'block';
 }
 
 /**
