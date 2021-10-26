@@ -8,29 +8,29 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 let cards = [{
-    'heading': 'About us',
-    'image': 'assets/images/coupleDrawing-tp4.png',
-    'description': `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore perspiciatis
+        'heading': 'About us',
+        'image': 'assets/images/coupleDrawing-tp4.png',
+        'description': `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore perspiciatis
     quisquam quod dolor, culpa ea excepturi soluta dicta cumque,
     quo corrupti optio praesentium ipsa suscipit.Ratione nisi eligendi quasi
     fuga ?`
-},
-{
-    'heading': 'What we do',
-    'image': 'assets/images/greenhouse-photo2.png',
-    'description': `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore perspiciatis
+    },
+    {
+        'heading': 'What we do',
+        'image': 'assets/images/greenhouse-photo2.png',
+        'description': `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore perspiciatis
     quisquam quod dolor, culpa ea excepturi soluta dicta cumque,
     quo corrupti optio praesentium ipsa suscipit.Ratione nisi eligendi quasi
     fuga ?`
-},
-{
-    'heading': 'What we have',
-    'image': 'assets/images/chicken_eggs2.png',
-    'description': `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore perspiciatis
+    },
+    {
+        'heading': 'What we have',
+        'image': 'assets/images/chicken_eggs2.png',
+        'description': `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore perspiciatis
     quisquam quod dolor, culpa ea excepturi soluta dicta cumque,
     quo corrupti optio praesentium ipsa suscipit.Ratione nisi eligendi quasi
     fuga ?`
-}
+    }
 ]
 
 /**
@@ -60,17 +60,45 @@ function ClickAboutButtons() {
     }
 }
 
-function ClickMenuBars(){
+function ClickMenuBars() {
+    let menuClosed = true;
     let menuButton = document.getElementById('menu-button');
     menuButton.addEventListener('click', function menuButtonClicked() {
-        console.log('menu-clicked');
-        OpenMenu();
+        if (menuClosed === true) {
+            OpenMenu();
+            menuClosed = false;
+        }else{
+            CloseMenu();
+            menuClosed = true;
+        }
     })
 }
 
-function OpenMenu(menuButton){
-    menu = document.getElementsByClassName('nav-menu')[0];
+function SwitchMenuIcon(iconClass){
+    let openClass = ("fas", "fa-bars");
+    let closeClass = ("fas", "fa-times");
+    let menuIcon = document.getElementById('menu-icon');
+    if (iconClass === 'open'){
+        menuIcon.classList.remove(openClass);
+        menuIcon.classList.add(closeClass);
+    }else if (iconClass === 'close'){
+        menuIcon.classList.remove(closeClass);
+        menuIcon.classList.add(openClass);
+    } else{
+        return;
+    }
+}
+
+function OpenMenu() {
+   let menu = document.getElementsByClassName('nav-menu')[0];
     menu.style.display = 'block';
+    SwitchMenuIcon('open');
+}
+
+function CloseMenu(){
+    let menu = document.getElementsByClassName('nav-menu')[0];
+    menu.style.display = 'none';
+    SwitchMenuIcon('close');
 }
 
 /**
