@@ -204,8 +204,9 @@ footer > p > i{
     height: 100%;
     width: 100%;
     position: relative;
-
 }
+
+.instagram-media{margin:0 auto !important;}
 
 #instagram-post > div{
     height: auto;
