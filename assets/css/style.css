@@ -37,6 +37,7 @@ body{
     background: var(--background-color);
     padding: 10px 10px 10px 0;
     margin-bottom: 50px;
+    align-items: center;
 }
 
 .nav-bar li{
@@ -87,7 +88,11 @@ body{
 
 #logo{
     flex: 1;
-    font-size: 1.5rem;
+    background-image: url('/assets/images/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 120px;
 }
 
 #about-buttons {
